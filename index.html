@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,59 @@
     <nav class="navbar">
       <div class="logo">🐾 Paws n' Play</div>
       <div class="nav-links">
-        <a href="#shop">Shop</a>
-        <a href="#services">Services</a>
+        <a href="#shop" class="dropdown">Shop <span class="arrow">⬇</span>
+          <div class="dropdown-menu">
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+          </div>
+        </a>
+        <a href="#services" class="dropdown">Services <span class="arrow">⬇</span>
+          <div class="dropdown-menu">
+            <a href="#">a</a>
+            <a href="#">b</a>
+            <a href="#">c</a>
+          </div>
+        </a>
         <a href="#about">About Us</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
       </div>
       <button class="get-started">Get Started</button>
-    </nav>
+      <button class="mobile-menu-button">☰</button>
+    </nav>     
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-logo">🐾 Paws n' Play</div>
+      <button class="mobile-menu-close">✕</button>
+    </div>
+    <div class="mobile-menu-links">
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle">Shop <span>⬇</span></button>
+        <div class="mobile-dropdown-content">
+          <a href="#">Dog Products</a>
+          <a href="#">Cat Products</a>
+          <a href="#">Fish Supplies</a>
+          <a href="#">Bird Accessories</a>
+        </div>
+      </div>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle">Services <span>⬇</span></button>
+        <div class="mobile-dropdown-content">
+          <a href="#">Grooming</a>
+          <a href="#">Training</a>
+          <a href="#">Veterinary Care</a>
+          <a href="#">Boarding</a>
+        </div>
+      </div>
+      <a href="#about">About Us</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="mobile-get-started">Get Started</a>
+    </div>
+  </div>
 
     <header class="hero">
       <div class="hero-content">
@@ -28,294 +73,427 @@
       </div>
     </header>
 
-    <section id="shop" class="shop-section">
-      <h2>Featured Products</h2>
-      <div class="filters">
-        <button class="active">Random</button>
-        <button>Cat</button>
-        <button>Dogs</button>
-        <button>Fish</button>
-        <button>Birds</button>
-      </div>
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://placehold.co/300x300" alt="Cat Food">
+    <section class="shop-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">🐾 Shop</h2>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Featured Products</h3>
+            <div class="search-container">
+              <div class="search-icon">🔍</div>
+              <input type="text" placeholder="Search" class="search-input">
+            </div>
           </div>
-          <div class="product-overlay">
-            <div class="product-price">$29.99</div>
-            <button class="favorite-btn"><i class="fas fa-heart"></i></button>
-            <h3>Premium Cat Food</h3>
-            <p class="product-description">High-quality nutrition for your feline friend. Made with premium ingredients.</p>
-            <div class="product-controls">
-              <div class="quantity-control">
-                <button class="quantity-btn minus">-</button>
-                <span class="quantity">1</span>
-                <button class="quantity-btn plus">+</button>
+          
+          <div class="tabs">
+            <button class="tab tab-active">Random</button>
+            <button class="tab tab-inactive">Cat</button>
+            <button class="tab tab-inactive">Dogs</button>
+            <button class="tab tab-inactive">Fish</button>
+            <button class="tab tab-inactive">Birds</button>
+          </div>
+          
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img src="imagens/racaoGato.png" alt="Cat Multivitamin">
               </div>
-              <button class="add-to-cart">Add to cart</button>
+              <div class="product-overlay">
+                <div class="product-price">₦15.000.00</div>
+                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                <h3>Multivitamin for Cat</h3>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam.</p>
+                <div class="product-controls">
+                  <div class="quantity-control">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                  <button class="add-to-cart">Add to cart</button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card">
+              <div class="product-image">
+                <img src="imagens/racaogato2.png" alt="Cat Food">
+              </div>
+              <div class="product-overlay">
+                <div class="product-price">₦15.000.00</div>
+                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                <h3>Cat Food</h3>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam.</p>
+                <div class="product-controls">
+                  <div class="quantity-control">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                  <button class="add-to-cart">Add to cart</button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="product-card">
+              <div class="product-image">
+                <img src="imagens/racaoCachorro.png" alt="Dog Food">
+              </div>
+              <div class="product-overlay">
+                <div class="product-price">₦15.000.00</div>
+                <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                <h3>Dog Food</h3>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam.</p>
+                <div class="product-controls">
+                  <div class="quantity-control">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                  <button class="add-to-cart">Add to cart</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://placehold.co/300x300" alt="Dog Food">
+      </div>
+    </section>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🐾 Services</h2>
+      </div>
+      
+      <div class="card">
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="imagens/Grooming.png" alt="Grooming">
+            <h3>Grooming</h3>
           </div>
-          <div class="product-overlay">
-            <div class="product-price">$34.99</div>
-            <button class="favorite-btn"><i class="fas fa-heart"></i></button>
-            <h3>Organic Dog Food</h3>
-            <p class="product-description">Natural and organic ingredients for your dog's optimal health.</p>
-            <div class="product-controls">
-              <div class="quantity-control">
-                <button class="quantity-btn minus">-</button>
-                <span class="quantity">1</span>
-                <button class="quantity-btn plus">+</button>
+
+          <div class="service-card">
+            <img src="imagens/Boarding.png" alt="Boarding">
+            <h3>Boarding</h3>
+          </div>
+          
+          <div class="service-card">
+            <img src="imagens/veterinary.png" alt="Veterinary">
+            <h3>Veterinary</h3>
+          </div>
+
+          <div class="service-card">
+            <img src="imagens/training.png" alt="Training">
+            <h3>Training</h3>
+          </div>
+          
+          <div class="service-card adoption">
+            <img src="imagens/adoption.png" alt="Adoption">
+            <h3>Adoption</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+     <section class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">🐾 About Us</h2>
+        </div>
+        
+        <div class="card">
+          <div class="about-content">
+            <div class="about-text">
+              <p>At Paws n' Play, our journey began with a simple yet profound love for animals. Inspired by the unwavering companionship and joy they bring to our lives, we embarked on a mission to create a haven where pets and their owners alike could experience unparalleled happiness and care.</p>
+              
+              <p>Driven by our passion for animal welfare, we hand-select each product and service with meticulous attention to quality and sustainability. From nutritious food and supplements to expert grooming and healthcare, every offering is carefully curated to meet the unique needs of our beloved furry friends.</p>
+              
+              <p>But our commitment doesn't end there. We're dedicated to fostering a community that celebrates the bond between pets and their human companions. Through educational resources, compassionate support, and memorable experiences, we strive to empower pet owners to provide the best possible care for their furry family members.</p>
+              
+              <p>At Paws n' Play, customer satisfaction isn't just a goal – it's our guiding principle. We go above and beyond to ensure every interaction leaves tails wagging and hearts smiling. From personalized recommendations to attentive service, we're here to make your journey with your pet as joyful and fulfilling as possible.</p>
+              
+              <p>Join us in our mission to create a world where every pet is cherished, every need is met, and every tail wags with happiness. Welcome to Paws n' Play, where pets are family, and love knows no bounds.</p>
+            </div>
+            
+            <div class="about-images">
+              <div class="about-image">
+                <img src="imagens/gato00.png" alt="Cat with birthday cake">
               </div>
-              <button class="add-to-cart">Add to cart</button>
+              <div class="about-image">
+                <img src="imagens/gato01.png" alt="Cat with food bowl">
+              </div>
             </div>
           </div>
         </div>
-        <div class="product-card">
-          <div class="product-image">
-            <img src="https://placehold.co/300x300" alt="Pet Treats">
-          </div>
-          <div class="product-overlay">
-            <div class="product-price">$19.99</div>
-            <button class="favorite-btn"><i class="fas fa-heart"></i></button>
-            <h3>Natural Pet Treats</h3>
-            <p class="product-description">Healthy and delicious treats your pets will love.</p>
-            <div class="product-controls">
-              <div class="quantity-control">
-                <button class="quantity-btn minus">-</button>
-                <span class="quantity">1</span>
-                <button class="quantity-btn plus">+</button>
+      </div>
+    </section>
+
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">🐾 Our Team</h2>
+      </div>
+      
+      <div class="card">
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-image">
+              <img src="imagens/Olivia.jpg" alt="Dr. Olivia Rhye">
+            </div>
+            <div class="team-info">
+              <h3>Dr. Olivia Rhye</h3>
+              <p>Senior Veterinarian</p>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
               </div>
-              <button class="add-to-cart">Add to cart</button>
+            </div>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-image">
+              <img src="imagens/PhoenixBaker.jpg" alt="Phoenix Baker">
+            </div>
+            <div class="team-info">
+              <h3>Phoenix Baker</h3>
+              <p>Asst. Veterinarian</p>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-image">
+              <img src="imagens/LanaSteiner.jpg" alt="Lana Steiner">
+            </div>
+            <div class="team-info">
+              <h3>Lana Steiner</h3>
+              <p>Resident Veterinarian</p>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-image adjust-position">
+              <img src="imagens/Demi.jpg" alt="Demi Wilkinson">
+            </div>
+            <div class="team-info">
+              <h3>Demi Wilkinson</h3>
+              <p>Intern Veterinarian</p>
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="services" class="services-section">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="https://placehold.co/400x300" alt="Grooming">
-          <h3>Grooming</h3>
-        </div>
-        <div class="service-card">
-          <img src="https://placehold.co/400x300" alt="Boarding">
-          <h3>Boarding</h3>
-        </div>
-        <div class="service-card">
-          <img src="https://placehold.co/400x300" alt="Adoption">
-          <h3>Adoption</h3>
-        </div>
-        <div class="service-card">
-          <img src="https://placehold.co/400x300" alt="Veterinary">
-          <h3>Veterinary</h3>
-        </div>
-        <div class="service-card">
-          <img src="https://placehold.co/400x300" alt="Training">
-          <h3>Training</h3>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about-section">
-      <h2>About Us</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>At Paws n' Play, our journey began with a simple yet profound love for animals. Inspired by the unwavering bond between pets and their human companions, we've embarked on a mission to create a haven where pets and their owners alike could experience unparalleled happiness and care.</p>
-          <p>Driven by our passion for animal welfare, we hand-select every product and service with a keen focus on safety, quality, and sustainability. From nutritious food and supplements to engaging toys and accessories, our offering is carefully curated to meet the unique needs of our beloved furry friends.</p>
-        </div>
-        <img src="https://placehold.co/500x300" alt="About Us Image">
-      </div>
-    </section>
-
-    <section id="team" class="team-section">
-      <h2>Our Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="https://placehold.co/200x200" alt="Team Member">
-          <h3>Dr. Olivia Reye</h3>
-          <p>Head Veterinarian</p>
-        </div>
-        <div class="team-member">
-          <img src="https://placehold.co/200x200" alt="Team Member">
-          <h3>Phoenix Baker</h3>
-          <p>Lead Groomer</p>
-        </div>
-        <div class="team-member">
-          <img src="https://placehold.co/200x200" alt="Team Member">
-          <h3>Lena Steiner</h3>
-          <p>Pet Trainer</p>
-        </div>
-        <div class="team-member">
-          <img src="https://placehold.co/200x200" alt="Team Member">
-          <h3>Demi Wilkinson</h3>
-          <p>Care Specialist</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="blog" class="blog-section">
-      <h2>Blog</h2>
-      <div class="blog-content">
-        <div class="blog-text">
-          <h3>Milestone: 20,000 Pets Treated</h3>
-          <p>Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.</p>
-          <h4>Renewed target</h4>
+ <section class="blog-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">🐾 Blog</h2>
+    </div>
+    
+    <div class="card">
+      <div class="blog-post">
+        <div class="blog-content">
+          <h2>Milestone: 20,000 Pets Treated</h2>
+          <p>Eget quis mi enim, leo lacinia pharetra, semper. Eget in <u>volutpat mollis</u> at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit <u>tristique risus</u>, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.</p>
+          
+          <p>Eget quis mi enim, leo lacinia pharetra, semper. Eget in <u>volutpat mollis</u> at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit <u>tristique risus</u>, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.</p>
+          
+          <h3>Renewed target</h3>
           <p>Pharetra morbi libero id aliquam elit massa integer tellus. Quis felis aliquam ullamcorper porttitor. Pulvinar ullamcorper sit dictumst ut eget a, elementum eu. Maecenas est morbi mattis id in ac.</p>
-          <button class="read-more">Read more</button>
+          
+          <a href="#" class="read-more">Read more</a>
         </div>
-        <div class="blog-video">
-          <img src="https://placehold.co/600x400" alt="Blog Video Thumbnail">
-          <button class="play-button">
-            <i class="fas fa-play"></i>
-          </button>
+        
+        <div class="blog-image">
+          <img src="imagens/cachorroPlay.png" alt="Golden retriever with toys">
+          <div class="play-button"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="contact" class="contact-section">
-      <h2>Get in touch</h2>
-      <div class="contact-container">
-        <form class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First name</label>
-              <input type="text" id="firstName" placeholder="First name">
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last name</label>
-              <input type="text" id="lastName" placeholder="Last name">
-            </div>
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <h2 class="footer-title">
+          <span>🐾</span> Get in touch
+        </h2>
+        
+        <div class="footer-content">
+          <div class="contact-form-container">
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First name</label>
+                  <input type="text" id="firstName" class="form-control" placeholder="First name" required>
+                  <div class="error-message">Please enter your first name</div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="lastName">Last name</label>
+                  <input type="text" id="lastName" class="form-control" placeholder="Last name" required>
+                  <div class="error-message">Please enter your last name</div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="you@company.com" required>
+                <div class="error-message">Please enter a valid email address</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+                <div class="error-message">Please enter your message</div>
+              </div>
+              
+              <div class="checkbox-group">
+                <input type="checkbox" id="privacy" required>
+                <label for="privacy">You agree to our friendly <a href="#" class="privacy-link">privacy policy</a>.</label>
+              </div>
+              
+              <button type="submit" class="submit-btn">Send message</button>
+              
+              <div class="form-success">
+                <h3>Thank you for your message!</h3>
+                <p>We've received your inquiry and will get back to you as soon as possible.</p>
+              </div>
+              
+              <div class="form-error">
+                <h3>Oops! Something went wrong.</h3>
+                <p>Please try again or contact us directly at support@pawsnplay.com</p>
+              </div>
+            </form>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="you@company.com">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="4"></textarea>
-          </div>
-          <div class="form-checkbox">
-            <input type="checkbox" id="privacy">
-            <label for="privacy">You agree to our friendly <a href="#" class="privacy-link">privacy policy</a>.</label>
-          </div>
-          <button type="submit" class="send-message">Send message</button>
-        </form>
-
-        <div class="contact-info">
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <h4>Email</h4>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <h3><i class="fas fa-envelope"></i> Email</h3>
               <p>Our friendly team is here to help.</p>
               <a href="mailto:hello@pawsnplay.com">hello@pawsnplay.com</a>
             </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-comments"></i>
-            <div>
-              <h4>Live chat</h4>
+            
+            <div class="contact-item">
+              <h3><i class="fas fa-comment-dots"></i> Live chat</h3>
               <p>Our friendly team is here to help.</p>
-              <button class="start-chat">Start new chat</button>
+              <a href="#" id="startChat">Start new chat</a>
             </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-location-dot"></i>
-            <div>
-              <h4>Office</h4>
+            
+            <div class="contact-item">
+              <h3><i class="fas fa-map-marker-alt"></i> Office</h3>
               <p>Come say hello at our office HQ.</p>
-              <p>123, Yaya Abatan st, Ogba Lagos.</p>
+              <a href="https://maps.google.com" target="_blank">123, Yaya Abatan st, Ogba Lagos.</a>
             </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-phone"></i>
-            <div>
-              <h4>Phone</h4>
+            
+            <div class="contact-item">
+              <h3><i class="fas fa-phone-alt"></i> Phone</h3>
               <p>Mon-Fri from 8am to 5pm.</p>
-              <a href="tel:+2349012341394">+234 901234 394</a>
+              <a href="tel:+2349012345678">+234 901234 384</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="logo">Paws n' Play</div>
-          <p>Where wagging tails and purring hearts reign supreme!</p>
-        </div>
-        <div class="footer-links">
-          <div class="footer-column">
-            <h4>Shop</h4>
-            <a href="#">Pet Adoption</a>
-            <a href="#">Nutrition</a>
-            <a href="#">Pet Care</a>
-            <a href="#">Pet Food</a>
-            <a href="#">Pricing</a>
-          </div>
-          <div class="footer-column">
-            <h4>Company</h4>
-            <a href="#">About us</a>
-            <a href="#">Careers</a>
-            <a href="#">News</a>
-            <a href="#">Contact</a>
-          </div>
-          <div class="footer-column">
-            <h4>Services</h4>
-            <a href="#">Grooming</a>
-            <a href="#">Boarding</a>
-            <a href="#">Training</a>
-            <a href="#">Vetinary</a>
-            <a href="#">Support</a>
-          </div>
-          <div class="footer-column">
-            <h4>Social</h4>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Facebook</a>
-            <a href="#">AngelList</a>
-            <a href="#">Dribbble</a>
-          </div>
-          <div class="footer-column">
-            <h4>Legal</h4>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">Cookies</a>
-            <a href="#">Licenses</a>
-            <a href="#">Settings</a>
-          </div>
+      
+      <div class="newsletter">
+        <div class="newsletter-content">
+          <h3 class="newsletter-title">Join our newsletter</h3>
+          <p class="newsletter-text">Be the first to receive latest updates on promo, sales and offers</p>
+          
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
         </div>
       </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <span>🐾</span> Paws n' Play
+          </div>
+          <p class="footer-tagline">Where wagging tails and purring hearts reign supreme!</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">Pet Adoption</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">Pet Care</a></li>
+            <li><a href="#">Pet Food</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Grooming</a></li>
+            <li><a href="#">Boarding</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Vetinary</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Licenses</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      
       <div class="footer-bottom">
-        <div class="newsletter">
-          <h4>Join our newsletter</h4>
-          <p>Be the first to receive latest updates on promo, sales and offers</p>
-          <div class="newsletter-form">
-            <input type="email" placeholder="Enter your email">
-            <button type="submit">Subscribe</button>
-          </div>
-        </div>
-        <div class="footer-info">
-          <p>© 2024 Paws n' Play. All rights reserved.</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-angellist"></i></a>
-            <a href="#"><i class="fas fa-basketball"></i></a>
-          </div>
+        <div>© 2024 Paws n' Play. All rights reserved.</div>
+        
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+          <a href="#" class="social-icon"><i class="fas fa-basketball-ball"></i></a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
     <script type="module" src="/brain.js"></script>
   </body>
